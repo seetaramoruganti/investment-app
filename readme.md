@@ -1,2 +1,2 @@
 <h1>Investment app </h1>
-<img src='./assets/working.png'>
+<img src='src/assets/working.png'>

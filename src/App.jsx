@@ -11,6 +11,8 @@ function App() {
     duration: 10,
   });
 
+  const validDuration = inputs.duration >= 1;
+
   function handleChange(inputIdentifier, newValue) {
     setInputs((prevInputs) => {
       console.log(newValue);
@@ -24,7 +26,8 @@ function App() {
     <>
       <Header />
       <UserInput userInputs={inputs} onChange={handleChange} />
-      <Results userInputs={inputs} />
+      {validDuration && <Results userInputs={inputs} />}
+      {!validDuration && <p>please input valid duration</p>}
     </>
   );
 }
